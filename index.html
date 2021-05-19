@@ -1,0 +1,44 @@
+<html>
+  <script>
+	  //2進数から10進数
+	  const culc1 =(dec)=>{
+	    console.log(parseInt(dec, 2));
+	  }
+
+	  //10進数から2進数
+	  const culc2 =(dec)=>{
+	    console.log(dec.toString(2));
+	  }
+
+	  //10進数から2進数
+	  const culc3 =(num)=>{
+	    let ans = [];
+	    if (num === 0) {
+	      return '0';
+	    }
+	    while (num > 0) {
+	      ans.push(num%2);
+	      num = Math.floor(num / 2);
+	    }
+	    console.log(ans.reverse().join(''));
+	  }
+
+	  //2進数から10進数
+	  const culc4 =(str)=>{
+	    let nums = str.split("").map(Number).reverse();
+	    let ans = 0
+	    for (let i = 0; i < nums.length; i++) {
+	      ans += Math.pow(2, i) * nums[i]
+	    }
+	    console.log(ans);
+	  }
+
+	  //2進数を10進数に
+	  culc1('100010');
+	  culc4('10101010');
+
+	  //10進数を2進数に
+	  culc2(160);
+	  culc3(160);
+  </script>
+</html>
